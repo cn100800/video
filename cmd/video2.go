@@ -1,4 +1,4 @@
-package main
+package cmd
 
 import "io/ioutil"
 import "log"
@@ -27,7 +27,7 @@ func (vh *viewHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	w.Write(data)
 }
 
-func main() {
+func video2() {
 	http.Handle("/", new(viewHandler))
 	http.ListenAndServe(":8080", nil)
 }

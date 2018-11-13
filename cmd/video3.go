@@ -1,4 +1,4 @@
-package main
+package cmd
 
 import (
 	"fmt"
@@ -12,7 +12,7 @@ func init() {
 	format.RegisterAll()
 }
 
-func main() {
+func video3() {
 	file, _ := avutil.Open("test.mp4")
 	streams, _ := file.Streams()
 	for _, stream := range streams {

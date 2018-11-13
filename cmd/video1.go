@@ -1,4 +1,4 @@
-package main
+package cmd
 
 import (
 	"log"
@@ -17,7 +17,7 @@ func ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	http.ServeContent(w, r, "test.mp4", time.Now(), video)
 }
 
-func main() {
+func Video() {
 	http.HandleFunc("/", ServeHTTP)
 	http.ListenAndServe(":8080", nil)
 }
