@@ -12,7 +12,7 @@ func init() {
 	format.RegisterAll()
 }
 
-func video3() {
+func Video3() {
 	file, _ := avutil.Open("test.mp4")
 	streams, _ := file.Streams()
 	for _, stream := range streams {

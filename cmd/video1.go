@@ -17,7 +17,7 @@ func ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	http.ServeContent(w, r, "test.mp4", time.Now(), video)
 }
 
-func Video() {
+func Video1() {
 	http.HandleFunc("/", ServeHTTP)
 	http.ListenAndServe(":8080", nil)
 }
